@@ -3,122 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main</title>
-    <link rel="stylesheet" href="troll_main.css">
+    <title>Troll</title>
+    <link rel="stylesheet" href="troll.css">
+    <script src="troll.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <div class="left-head">
-            <img src="profile2.png" alt="user icon" class="user_icon">
-            <div class="username">Welcome Aung Kaung Myat!</div>
-        </div>
-        <div class="right_head">
-            <div class="inbox-btn" id="openInbox" style="position: relative; cursor: pointer;">
-                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="inbox-icon" alt="inbox">
-                <span class="notification-badge" id="msgBadge" style="display: none;">0</span>
-            </div>
-            <img src="coin.png" alt="balance" class="coin">
-            <div class="balance_box">0</div>
-        </div>
+    <div class="container">
+        <h1 class="welcome">ကြိုဆိုပါတယ်</h1>
+        <input class="email1" placeholder="enter your username">
+        <input class="email" placeholder="enter your email address">
+        <input class="password" placeholder="enter your password" type="password">
+        <button class="sign_up" id="sign-btn">အကောင့်ဖွင့်ရန်</button>
     </div>
-
-    <div class="modal-overlay" id="messageModal" hidden style="display: none;">
-        <div class="modal" style="display: flex; flex-direction: column; width: 400px; max-width: 90%;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">
-                <div>
-                    <h3 class="modal-title" style="margin: 0;">Admin Messages</h3>
-                    <p class="modal-sub" style="margin: 2px 0 0 0; font-size: 0.8rem; color: #64748b;">Official updates from management</p>
-                </div>
-                <button id="clearAllMsgs" style="padding: 6px 12px; background: #ef4444; color: #fff; border: none; border-radius: 6px; font-size: 0.8rem; font-weight: bold; cursor: pointer; font-family: monospace;">Clear All</button>
-            </div>
-
-            <div class="msg-modal-content" id="inboxList" style="margin-top: 15px; max-height: 300px; overflow-y: auto;">
-                </div>
-
-            <div class="modal-actions" style="margin-top: 15px; text-align: right;">
-                <button class="modal-btn modal-btn-cancel" id="closeInbox" style="cursor: pointer;">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="marquee-container">
-      <div class="marquee-content">
-        <span>ဂဏန်း (၆) လုံးကို မှန်ကန်အောင်ခန့်မှန်းပြီး ဆုကြီးမားတွေကို ရယူလိုက်ပါ </span>
-        <span>ဂဏန်း (၆) လုံးကို မှန်ကန်အောင်ခန့်မှန်းပြီး ဆုကြီးမားတွေကို ရယူလိုက်ပါ</span>
-      </div>
-    </div>
-
-    <div class="dashboard">
-        <div class="guess">
-            <input class="guess-input" type="text" placeholder="ဆုကြီးများဆွတ်ခူးနိုင်ရန် ကံထူးဂဏန်း (၆) လုံးကို ရိုက်ထည့်ပါ" maxlength="6">
-            <button class="btn">ရိုက်ထည့်ပါ</button>
-            <div class="marquee-container1">
-              <div class="marquee-content1">
-                <span>ထည့်သွင်းမှု (၁) ကြိမ်လျှင် ဒင်္ဂါး (၁) ပြား</span>
-              </div>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card1">
-                <img src="dollar.png" class="dollar" alt="dollar">
-                (၆) လုံးစလုံးတူရင် - ၅၀၀,၀၀၀ MMK
-            </div>
-            <div class="card1">
-                <img src="dollar.png" class="dollar" alt="dollar">
-                နောက်ဆုံး (၅) လုံးတူရင် -  MMK
-            </div>
-            <div class="card1">
-                <img src="dollar.png" class="dollar" alt="dollar">
-                နောက်ဆုံး (၄) လုံးတူရင် - ၃၀၀,၀၀၀ MMK
-            </div>
-            <div class="card1">
-                <img src="dollar.png" class="dollar" alt="dollar">
-                နောက်ဆုံး (၃) လုံးတူရင် - ၅,၀၀0 MMK
-            </div>
-        </div>
-
-        <div class="refill-section">
-            <h2 class="refill-title">Refill Coins</h2>
-            <div class="refill-cards">
-                <div class="pay-card pay-card-kbz" data-method="KBZ Pay">
-                    <img src="kbz.png" class="pay-card-logo-img" alt="KBZ Pay">
-                    <div class="pay-card-name">KBZ Pay</div>
-                    <div class="pay-card-sub">Refill coins with KBZ Pay</div>
-                </div>
-                <div class="pay-card pay-card-aya" data-method="AYA Pay">
-                    <img src="ayapay.png" class="pay-card-logo-img" alt="AYA Pay">
-                    <div class="pay-card-name">AYA Pay</div>
-                    <div class="pay-card-sub">Refill coins with AYA Pay</div>
-                </div>
-                <div class="pay-card pay-card-uab" data-method="UAB Pay">
-                    <img src="uab.jpg" class="pay-card-logo-img" alt="UAB Pay">
-                    <div class="pay-card-name">UAB Pay</div>
-                    <div class="pay-card-sub">Refill coins with UAB Pay</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="refillModal" hidden>
-        <div class="modal">
-            <h3 class="modal-title" id="modalTitle">Refill Coins</h3>
-            <p class="modal-sub">1 coin = 1,000 MMK</p>
-
-            <label class="modal-label" for="coinAmount">How many coins do you want to refill?</label>
-            <input type="number" id="coinAmount" class="modal-input" min="1" placeholder="e.g. 5">
-
-            <label class="modal-label" for="phoneNumber">Payment phone number</label>
-            <input type="text" id="phoneNumber" class="modal-input" placeholder="09xxxxxxxxx" maxlength="15">
-
-            <p class="modal-total" id="modalTotal">Total: 0 MMK</p>
-
-            <div class="modal-actions">
-                <button class="modal-btn modal-btn-cancel" id="modalCancel">Cancel</button>
-                <button class="modal-btn modal-btn-pay" id="modalPay">Pay Now</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="troll-main.js" defer></script>
 </body>
 </html>
